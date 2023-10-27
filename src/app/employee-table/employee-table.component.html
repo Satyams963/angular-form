@@ -1,0 +1,28 @@
+<!-- employee-table.component.html -->
+
+<div class="container mt-3" style="margin-bottom: 100px;">
+     <br><br>
+     <div style="background-color: aqua; padding: 10px; border-radius: 10px;">
+          <h3 style="text-align: center;">Employee Data Table</h3>
+          <table class="table">
+               <thead>
+                    <tr>
+                         <th>Employee Name</th>
+                         <th>Employee Address</th>
+                         <th>Phone Number</th>
+                         <th>Date of Birth</th>
+                         <th>Email</th>
+                    </tr>
+               </thead>
+               <tbody>
+                    <tr *ngFor="let employee of employees">
+                         <td>{{ employee?.employeeName || 'N/A' }}</td>
+                         <td>{{ employee?.employeeAddress || 'N/A' }}</td>
+                         <td>{{ employee?.employeePhoneNumber || 'N/A' }}</td>
+                         <td>{{ employee?.employeeDob || 'N/A' }}</td>
+                         <td>{{ employee?.employeeEmail || 'N/A' }}</td>
+                    </tr>
+               </tbody>
+          </table>
+     </div>
+</div>

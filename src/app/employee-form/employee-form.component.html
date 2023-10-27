@@ -1,0 +1,37 @@
+<!-- employee-form.component.html -->
+
+<div
+     style="padding: 10px; width: 50%; margin-left: auto; margin-right: auto;background-color: beige;border-radius: 10px; border: 1px solid #c8c8c8;">
+     <div class="container mt-3">
+          <h3 style="text-align: center;">Employee Data Form</h3>
+          <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+               <div class="form-group" style="margin: 5px 5px;">
+                    <label for="employeeName">Employee Name:</label>
+                    <input type="text" id="employeeName" class="form-control" formControlName="employeeName">
+               </div>
+
+               <div class="form-group" style="margin: 5px 5px;">
+                    <label for="employeeAddress">Employee Address:</label>
+                    <input type="text" id="employeeAddress" class="form-control" formControlName="employeeAddress">
+               </div>
+
+               <div class="form-group" style="margin: 5px 5px;">
+                    <label for="employeePhoneNumber">Employee Phone Number:</label>
+                    <input type="tel" id="employeePhoneNumber" class="form-control"
+                         formControlName="employeePhoneNumber">
+               </div>
+
+               <div class="form-group" style="margin: 5px 5px;">
+                    <label for="employeeDob">Date of Birth:</label>
+                    <input type="date" id="employeeDob" class="form-control" formControlName="employeeDob">
+               </div>
+
+               <div class="form-group" style="margin: 5px 5px;">
+                    <label for="employeeEmail">Email:</label>
+                    <input type="email" id="employeeEmail" class="form-control" formControlName="employeeEmail">
+               </div>
+
+               <button type="submit" class="btn btn-primary" style="margin: 5px 5px;">Submit</button>
+          </form>
+     </div>
+</div>
